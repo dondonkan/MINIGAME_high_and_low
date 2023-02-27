@@ -1,4 +1,4 @@
-let score = 2;
+let score = 0;
 let highscore = 0;
 
 let number = Math.floor(Math.random() * 13) + 1;
@@ -49,13 +49,7 @@ function onClick(e){
         }
 
     }else if(mode_n == 2){
-        if (x >= 100 && x <= 300 && y >= 350 && y <= 400) {
-
-            
-
-
-        }else if (x >= 450 && x <= 650 && y >= 350 && y <= 400) {
-            // alert('again Clicked!');
+        if (x >= 450 && x <= 650 && y >= 350 && y <= 400) {
             ctx.clearRect(0, 0, 750, 500);
             mode_n = 1;
             score = 0;
@@ -76,7 +70,7 @@ function gametitle(){
 
     // 四角形を描画
     ctx.fillStyle = 'red';
-    ctx.fillRect(225, 350, 250, 50); //50, 25, 100, 50
+    ctx.fillRect(225, 350, 250, 50); 
 
     //テキストを描画
     ctx.fillStyle = 'black';
@@ -84,8 +78,7 @@ function gametitle(){
     ctx.fillText('High & Low', 110, 200);
     ctx.font = '50px serif';
     ctx.fillText('start', 300, 390);
-    // ctx.font = '40px serif';
-    // ctx.fillText('your high score: '+ highscore, 205, 285);
+
     
 }
 
@@ -96,13 +89,13 @@ function gamedraw(){
 
     // 四角形を描画
     ctx.fillStyle = 'red';
-    ctx.fillRect(200, 350, 100, 100); //50, 25, 100, 50
+    ctx.fillRect(200, 350, 100, 100); 
     ctx.fillStyle = 'black';
     ctx.font = '30px serif';
     ctx.fillText('HIGH', 200, 415);   
 
     ctx.fillStyle = 'blue';
-    ctx.fillRect(450, 350, 100, 100); //50, 25, 100, 50
+    ctx.fillRect(450, 350, 100, 100); 
     ctx.fillStyle = 'black';
     ctx.font = '30px serif';
     ctx.fillText('LOW', 450, 415);
@@ -156,10 +149,10 @@ function game(){
 
 function result(){
     ctx.fillStyle = 'white';
-    ctx.fillRect(10, 10, 730, 480); //50, 25, 100, 50
+    ctx.fillRect(10, 10, 730, 480); 
 
     ctx.fillStyle = 'yellow';
-    ctx.fillRect(450, 350, 200, 50); //50, 25, 100, 50
+    ctx.fillRect(450, 350, 200, 50); 
     ctx.fillStyle = 'black';
     ctx.font = '30px serif';
     ctx.fillText('RETRY', 480, 380);
